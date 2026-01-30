@@ -1,0 +1,22 @@
+# --- OS Noise ---
+.DS_Store
+Thumbs.db
+
+# --- Build Artifacts ---
+dist/
+build/
+pkg/
+target/
+*.wasm
+*.js.map
+
+# --- Development Secrets ---
+.env
+.env.local
+*.pem
+cert.pem
+key.pem
+
+# --- Node/Dependencies ---
+node_modules/
+.npm/

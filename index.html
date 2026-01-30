@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Orthonode™ | Zero-Trust Infrastructure Engineering</title>
+    <meta name="description" content="Orthonode™ builds zero-trust hardware gateways for DePIN. Decoupling hardware truth from cloud dependencies using the Orthonode Protocol.">
+    <meta name="keywords" content="Orthonode™, DePIN, Zero Trust, Orthonode Protocol, IoTeX, Hivemapper Bee, Edge Computing, Web3 Engineering">
+    <meta name="author" content="Orthonode™">
+    <link rel="canonical" href="https://orthonode.xyz/">
+
+    <link rel="icon" type="image/png" href="https://orthonode.xyz/logo.png">
+    <link rel="apple-touch-icon" href="https://orthonode.xyz/logo.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://orthonode.xyz/">
+    <meta property="og:title" content="Orthonode™ | Zero-Trust Infrastructure">
+    <meta property="og:description" content="Secure hardware ingress for DePIN. Operational status: v1.4.7.">
+    <meta property="og:image" content="https://orthonode.xyz/orthonode-banner.png"> 
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@OrthonodeSys">
+    <meta name="twitter:title" content="Orthonode™ | Zero-Trust Edge">
+    <meta name="twitter:description" content="Re-engineering infrastructure trust boundaries. Zero-Trust Hardware Gateways.">
+    <meta name="twitter:image" content="https://orthonode.xyz/orthonode-banner.png"> 
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://orthonode.xyz/#organization",
+          "name": "Orthonode™",
+          "url": "https://orthonode.xyz",
+          "logo": "https://orthonode.xyz/logo.png",
+          "description": "Zero-trust infrastructure engineering lab building deterministic hardware protocols for DePIN.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bhopal",
+            "addressRegion": "Madhya Pradesh",
+            "addressCountry": "IN"
+          },
+          "sameAs": [
+            "https://twitter.com/OrthonodeSys",
+            "https://github.com/arhantbarmate",
+            "https://www.reddit.com/user/Automatic_Stick_3881/"
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Orthonode Protocol",
+          "operatingSystem": "Linux, Embedded",
+          "applicationCategory": "Infrastructure",
+          "description": "A hardware-integrated execution layer validating economic splits at the zero-trust edge."
+        }
+      ]
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #030303;
+            --accent: #E2E8F0; 
+            --status-green: #00ff9d;
+            --status-blue: #60a5fa;
+            --glass: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --text-dim: #94a3b8;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--bg); color: #e2e8f0; font-family: 'Inter', sans-serif; overflow-x: hidden; min-height: 100vh; }
+        
+        #particle-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+        
+        .hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; padding: 4rem 10%; }
+        h1 { font-size: clamp(3.5rem, 11vw, 9rem); font-weight: 900; letter-spacing: -6px; line-height: 0.85; text-transform: uppercase; background: linear-gradient(180deg, #FFFFFF 20%, #71717a 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 50px rgba(255, 255, 255, 0.08)); }
+        
+        .intro-glass { max-width: 650px; margin-top: 3.5rem; padding: 2.5rem; background: var(--glass); border: 1px solid var(--glass-border); backdrop-filter: blur(40px); border-radius: 4px; }
+        .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.5rem; padding: 2rem 10% 5rem 10%; }
+        
+        .glass-panel { background: var(--glass); border: 1px solid var(--glass-border); backdrop-filter: blur(50px); padding: 3rem; border-radius: 2px; transition: all 0.4s ease; }
+        .glass-panel:hover { background: rgba(255, 255, 255, 0.04); border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 10px 40px rgba(0,0,0,0.8); }
+        
+        .span-8 { grid-column: span 8; }
+        .span-4 { grid-column: span 4; }
+        .span-12 { grid-column: span 12; }
+        
+        .diag-terminal { background: rgba(0,0,0,0.85); border: 1px solid var(--glass-border); padding: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; margin-top: 1.5rem; color: var(--status-blue); min-height: 140px; box-shadow: inset 0 0 30px rgba(0,0,0,0.9); }
+        .exec-btn { background: rgba(255,255,255,0.05); color: #fff; border: 1px solid var(--glass-border); padding: 18px; font-family: 'JetBrains Mono'; font-weight: 700; cursor: pointer; width: 100%; margin-top: 1rem; text-transform: uppercase; letter-spacing: 3px; transition: 0.3s; }
+        .exec-btn:hover { background: #fff; color: #000; }
+        
+        .lab-footer { padding: 6rem 10% 3rem 10%; background: rgba(0,0,0,0.8); border-top: 1px solid var(--glass-border); display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+        .contact-box { margin-top: 1.5rem; padding: 1.5rem; background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border); font-family: 'JetBrains Mono'; font-size: 0.9rem; color: #fff; display: inline-block; letter-spacing: 1px; user-select: all; }
+        .social-link { display: block; padding: 15px 0; color: #666; text-decoration: none; font-family: 'JetBrains Mono'; border-bottom: 1px solid rgba(255,255,255,0.05); transition: 0.3s; font-size: 0.8rem; }
+        .social-link:hover { color: #fff; padding-left: 10px; border-color: #fff; }
+        
+        .legal-bar { grid-column: 1 / -1; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; font-family: 'JetBrains Mono'; font-size: 0.7rem; color: #666; display: flex; flex-direction: column; gap: 10px; }
+        .legal-link { color: #666; text-decoration: none; transition: 0.3s; }
+        .legal-link:hover { color: var(--accent); }
+        
+        @media (max-width: 900px) { .span-8, .span-4 { grid-column: span 12; } .lab-footer { grid-template-columns: 1fr; } h1 { font-size: 3.5rem; } }
+    </style>
+</head>
+<body>
+
+    <canvas id="particle-canvas"></canvas>
+
+    <section class="hero">
+        <img src="logo.png" alt="Orthonode™ Logo" style="width: 120px; height: auto; margin-bottom: 2rem; opacity: 0.95;">
+        <div style="font-family: 'JetBrains Mono'; color: #666; letter-spacing: 8px; margin-bottom: 1.5rem;">[ ZERO_TRUST_LAB_A1 ]</div>
+        <h1>Orthonode<br>Systems™</h1>
+        <div class="intro-glass">
+            <p style="font-family: 'JetBrains Mono'; font-size: 0.9rem; color: var(--text-dim); line-height: 1.8;">
+                Re-engineering infrastructure trust boundaries for the DePIN stack. <br>
+                We build the zero-trust gateways that secure the edge through hardened ingress and deterministic execution logic.
+            </p>
+        </div>
+    </section>
+
+    <div class="bento-grid">
+        <div class="glass-panel span-12" style="margin-bottom: 0.5rem; background: rgba(255,255,255,0.015);">
+            <div style="font-family: 'JetBrains Mono'; font-size: 0.7rem; color: #666; margin-bottom: 1rem;">// LAB_PROVENANCE</div>
+            <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">About Orthonode™</h2>
+            <p style="color: var(--text-dim); line-height: 1.8; max-width: 900px;">
+                Orthonode™ is a specialized engineering brand focused on the research and deployment of zero-trust hardware gateways for decentralized physical infrastructure networks (DePIN). Our mission is to decouple hardware-level truth from cloud dependencies—ensuring that decentralized networks remain resilient, verifiable, and secure at the edge through deterministic execution.
+            </p>
+            <p style="color: #666; font-size: 0.85rem; margin-top: 1.5rem; font-family: 'JetBrains Mono';">
+                Orthonode™ operates as a technical initiative of <strong>Orthonode Infrastructure Labs Private Limited</strong>, an R&D-focused legal entity based in Madhya Pradesh, India, dedicated to advancing edge verification systems, protocol research, and the Orthonode execution framework.
+            </p>
+        </div>
+
+        <div class="glass-panel span-8">
+            <div style="color: var(--status-green); font-family: 'JetBrains Mono'; font-size: 0.65rem; border: 1px solid; display: inline-block; padding: 4px 12px; margin-bottom: 1rem;">V1.4.7_OPERATIONAL</div>
+            <h2 style="font-size: 2.5rem; margin: 1rem 0;">Orthonode Protocol</h2>
+            <p style="color: var(--text-dim); line-height: 1.7;">The Zero-Trust Backbone for hardware ingress. The Orthonode Protocol replaces ad-hoc tunneling with a persistent Cloudflare-hardened execution layer.</p>
+            <a href="https://github.com/arhantbarmate/orthonode" class="social-link" style="border:none; margin-top:1rem;">[ INSPECT_BACKBONE ]</a>
+        </div>
+
+        <div class="glass-panel span-4">
+            <div style="font-family: 'JetBrains Mono'; font-size: 0.7rem; color: #666;">// LOGIC_SIMULATION</div>
+            <h3 style="margin: 0.5rem 0;">Sentry Heartbeat</h3>
+            <div class="diag-terminal" id="terminal-output">> SYSTEM_READY...</div>
+            <button class="exec-btn" onclick="runSimulation()">Run Heartbeat</button>
+        </div>
+
+        <div class="glass-panel span-12" style="border-left: 4px solid var(--status-blue);">
+            <h2 style="font-size: 2rem;">Hivemapper Bee Runtime</h2>
+            <p style="color: var(--text-dim); margin-top: 1rem;">Protecting rewards integrity through Vibration Entropy Correlation. This implementation prevents GPS spoofing by disabling ingress when physical motion fails validation.</p>
+            <div style="display: flex; gap: 20px; margin-top: 1.5rem;">
+                <a href="https://github.com/arhantbarmate/orthonode/blob/main/hivemapper-bee-runtime/BENCHMARKS.md" class="legal-link" style="border-bottom: 1px solid;">[ VIEW_BENCHMARKS ]</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="lab-footer">
+        <div>
+            <h3 style="font-family: 'JetBrains Mono'; color: #fff;">DIRECT_CONTACT</h3>
+            <div class="contact-box">infrastructure@orthonode.xyz</div>
+        </div>
+        <div>
+            <h3 style="font-family: 'JetBrains Mono'; color: #fff;">OPERATOR_CHANNELS</h3>
+            <div style="margin-top: 1.5rem;">
+                <a href="https://twitter.com/OrthonodeSys" class="social-link">> twitter/@OrthonodeSys</a>
+                <a href="https://github.com/arhantbarmate" class="social-link">> github/arhantbarmate</a>
+                <a href="https://www.reddit.com/user/Automatic_Stick_3881/" class="social-link">> reddit/u/Automatic_Stick_3881</a>
+            </div>
+        </div>
+        <div class="legal-bar">
+            <div>© 2026 Orthonode™ | Orthonode™ is a brand of Orthonode Infrastructure Labs</div>
+            <div>
+                <a href="privacy.html" class="legal-link">PRIVACY</a> | 
+                <a href="terms.html" class="legal-link">TERMS</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+        window.addEventListener('resize', resize); resize();
+
+        class Particle {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.speedX = (Math.random() - 0.5) * 0.1; 
+                this.speedY = (Math.random() - 0.5) * 0.1;
+                this.size = Math.random() * 1.5;
+                this.opacity = Math.random() * 0.4;
+            }
+            update() {
+                this.x += this.speedX; this.y += this.speedY;
+                if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
+            }
+            draw() {
+                ctx.fillStyle = `rgba(226, 232, 240, ${this.opacity})`;
+                ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill();
+            }
+        }
+        for (let i = 0; i < 80; i++) particles.push(new Particle());
+        function animate() {
+            ctx.clearRect(0,0,canvas.width, canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        function runSimulation() {
+            const out = document.getElementById('terminal-output');
+            out.innerHTML = "> INITIATING_TUNNEL_HANDSHAKE...<br>";
+            out.style.color = "#60a5fa"; 
+            setTimeout(() => { out.innerHTML += "> SENTRY_HEARTBEAT: VALIDATED<br>"; out.style.color = "#00ff9d"; }, 600);
+            setTimeout(() => { out.innerHTML += "> STATUS: ZERO_TRUST_INGRESS_SECURED"; }, 1100);
+        }
+    </script>
+</body>
+</html>
