@@ -1,4 +1,9 @@
-User-agent: *
+User-agent: Googlebot
 Allow: /
-Disallow: /404.html
+
+User-agent: *
+Disallow: /portal/  # Blocks AI from deep-scraping documentation logic
+Allow: /index.html
+Allow: /logo.png
+
 Sitemap: https://orthonode.xyz/sitemap.xml
