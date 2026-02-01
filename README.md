@@ -1,6 +1,7 @@
 # Orthonode™ | Physical Verification Infrastructure Lab
 
 **System Status:** `[OPERATIONAL — OAP v2.5.0]`  
+**Research Status:** `[NEXUS PROTOCOL — v1.4.0]`  
 **Legal Entity:** `Orthonode Infrastructure Labs Private Limited`  
 **Lead Engineer:** `Arhant Barmate`
 
@@ -14,23 +15,23 @@ By cross-referencing GPS traces against raw kinematic constraints and accelerome
 ---
 
 ## 🛠️ Core Technology Stack
-* **OAP (Orthonode Assurance Platform):** Our primary production module for physics-based telemetry validation.
-* **Nexus Protocol:** An experimental research prototype focused on decoupling hardware verification from cloud dependencies via Zero-Trust tunnels.
+* **OAP (Production):** Our primary auditing module (v2.5.0) for physics-based telemetry validation.
+* **Nexus Protocol (Research Phase):** A hardened research prototype (v1.4.0) focused on decoupling hardware verification from cloud dependencies. It remains under the active jurisdiction of Orthonode Labs as our foundational hardware-truth layer.
 * **Kinematic Attestation:** Deterministic analysis of speed, curvature, and lateral G-force to identify non-physical telemetry patterns.
 
 ---
 
 ## 📂 Repository Structure
 * **`index.html`**: The main terminal gateway and console.
-* **`terms.html`**: Service terms, including read-only audit scope and liability protections.
-* **`privacy.html`**: Data sovereignty policy, outlining our "Analyze & Purge" ephemeral processing lifecycle.
+* **`terms.html`**: Service terms (Jurisdiction: Balaghat, MP).
+* **`privacy.html`**: Data sovereignty & ephemeral processing lifecycle.
 * **`404.html`**: Custom system-halt error page.
-* **`robots.txt` / `sitemap.xml`**: Search engine directives optimized for our stealth-lab posture.
+* **`robots.txt` / `sitemap.xml`**: Search engine directives for stealth-lab posture.
 
 ---
 
 ## ⚖️ Rebranding & Identity Note
-**Orthonode Infrastructure Labs** was established following a strategic rebranding of the infrastructure division of **Coreframe Systems** to resolve regional naming conflicts and trademark issues. This repository serves as the official and singular home for all OAP operations and Nexus Protocol research.
+**Orthonode Infrastructure Labs** was established following a strategic rebranding of **Coreframe Systems**. This repository is the official and singular home for all OAP production and Nexus Protocol research. All intellectual property associated with Nexus Protocol v1.4.0 has been legally migrated to Orthonode jurisdiction.
 
 ---
 
@@ -39,7 +40,7 @@ By cross-referencing GPS traces against raw kinematic constraints and accelerome
 * **Inquiries:** `infrastructure@orthonode.xyz`
 * **X:** [@OrthonodeSys](https://x.com/OrthonodeSys)
 * **LinkedIn:** [Arhant Barmate](https://www.linkedin.com/in/arhant-barmate-5710163aa/)
-* **Jurisdiction:** Bhopal, Madhya Pradesh, India
+* **Jurisdiction:** Balaghat (Registered) / Bhopal (Ops), MP, India
 
 ---
 *Engineered for Verification of Physical Reality.*
