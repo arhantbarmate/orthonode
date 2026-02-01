@@ -8,8 +8,8 @@
     <style>
         :root {
             --bg: #050505;
-            --surface: rgba(15, 15, 15, 0.7);
-            --border: rgba(255, 255, 255, 0.08);
+            --surface: #0a0a0a;
+            --border: #262626;
             --text-main: #ededed;
             --text-dim: #737373;
             --accent: #333;
@@ -17,28 +17,65 @@
             --font-code: 'JetBrains Mono', monospace;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background: var(--bg); color: var(--text-main); font-family: var(--font-ui); line-height: 1.6; padding: 4rem 10%; }
-        #matrix-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.15; }
-        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 0%, rgba(3,3,3,0.9) 100%); z-index: 0; }
-        .container { position: relative; z-index: 10; max-width: 900px; margin: 0 auto; }
+        body { 
+            background: var(--bg); 
+            color: var(--text-main); 
+            font-family: var(--font-ui); 
+            line-height: 1.5; 
+            padding: 4rem 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        .container { 
+            max-width: 1000px; 
+            width: 100%;
+            border-left: 1px solid var(--border);
+            padding-left: 2rem;
+        }
         .silver-metal {
             background: linear-gradient(to bottom, #ffffff 0%, #e2e2e2 25%, #a1a1a1 50%, #cfcfcf 75%, #ffffff 100%);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.5)); font-weight: 800; font-size: 2.5rem; margin-bottom: 2rem; text-transform: uppercase;
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.5)); 
+            font-weight: 800; 
+            font-size: clamp(2rem, 5vw, 3rem); 
+            margin-bottom: 2rem; 
+            text-transform: uppercase;
+            font-family: var(--font-ui);
+            letter-spacing: -1px;
         }
-        h2 { font-family: var(--font-code); font-size: 1.1rem; color: #fff; margin-top: 3rem; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
-        p { color: var(--text-dim); margin-bottom: 1.2rem; font-size: 0.95rem; }
-        .mono { font-family: var(--font-code); color: #666; font-size: 0.75rem; margin-bottom: 0.5rem; }
-        .back-link { display: inline-block; margin-top: 4rem; font-family: var(--font-code); color: #fff; text-decoration: none; border: 1px solid #333; padding: 10px 20px; transition: 0.3s; font-size: 0.8rem; background: #000; }
-        .back-link:hover { border-color: #fff; }
+        h2 { 
+            font-family: var(--font-code); 
+            font-size: 0.9rem; 
+            color: #fff; 
+            margin-top: 3rem; 
+            padding-bottom: 10px; 
+            margin-bottom: 1rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--border);
+        }
+        p { color: var(--text-dim); margin-bottom: 1.2rem; font-size: 0.95rem; font-weight: 300; }
+        .mono { font-family: var(--font-code); color: var(--text-dim); font-size: 0.75rem; margin-bottom: 0.5rem; opacity: 0.6; }
+        .back-link { 
+            display: inline-block; 
+            margin-top: 4rem; 
+            font-family: var(--font-code); 
+            color: #fff; 
+            text-decoration: none; 
+            border: 1px solid var(--border); 
+            padding: 10px 20px; 
+            transition: 0.2s; 
+            font-size: 0.75rem; 
+            background: transparent; 
+        }
+        .back-link:hover { border-color: #fff; background: #fff; color: #000; }
     </style>
 </head>
 <body>
-    <canvas id="matrix-canvas"></canvas>
-    <div class="overlay"></div>
     <div class="container">
         <div class="mono">DOC_ID: TERMS_V2.5 // ORTHONODE_INFRASTRUCTURE_LABS</div>
-        <div class="mono" style="color: #444;">CONFIDENTIAL // ENTERPRISE AUDIT USE ONLY</div>
+        <div class="mono" style="color: var(--text-dim);">ACCESS: RESTRICTED // ENTERPRISE AUDIT USE ONLY</div>
         
         <h1 class="silver-metal">Service Terms</h1>
 
@@ -58,33 +95,9 @@
         <p>The client retains full ownership of their raw input data (GPS/IMU logs). Orthonode retains full ownership of the verification logic, models, and the generated "Risk Score" methodology.</p>
 
         <h2>6. Governing Law</h2>
-        <p>These terms are governed by the laws of India. Orthonode Infrastructure Labs Private Limited is incorporated under Indian law. Exclusive jurisdiction resides with the courts of Bhopal, Madhya Pradesh.</p>
+        <p>These terms are governed by the laws of India. Orthonode Infrastructure Labs Private Limited is incorporated under Indian law. Exclusive jurisdiction resides with the courts of Balaghat, Madhya Pradesh.</p>
 
         <a href="index.html" class="back-link">&lt; RETURN_TO_CONSOLE</a>
     </div>
-
-    <script>
-        const canvas = document.getElementById('matrix-canvas');
-        const ctx = canvas.getContext('2d');
-        let width = canvas.width = window.innerWidth;
-        let height = canvas.height = window.innerHeight;
-        const chars = "010101VERIFY_AUDIT_PHYSICS";
-        let columns = Math.floor(width / 20);
-        let drops = Array(columns).fill(1);
-        function draw() {
-            ctx.fillStyle = 'rgba(5, 5, 5, 0.05)';
-            ctx.fillRect(0, 0, width, height);
-            ctx.font = '12px JetBrains Mono';
-            for (let i = 0; i < drops.length; i++) {
-                const text = chars[Math.floor(Math.random() * chars.length)];
-                ctx.fillStyle = Math.random() > 0.98 ? '#fff' : 'rgba(100, 100, 100, 0.3)';
-                ctx.fillText(text, i * 20, drops[i] * 20);
-                if (drops[i] * 20 > height && Math.random() > 0.975) drops[i] = 0;
-                drops[i]++;
-            }
-            requestAnimationFrame(draw);
-        }
-        draw();
-    </script>
 </body>
 </html>
