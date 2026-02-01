@@ -3,74 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service | Orthonode™</title>
+    <title>Terms of Service | Orthonode Labs</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #030303;
+            --bg: #050505;
             --surface: rgba(15, 15, 15, 0.7);
             --border: rgba(255, 255, 255, 0.08);
-            --text-main: #e2e8f0;
-            --text-dim: #94a3b8;
-            --accent: #3b82f6;
+            --text-main: #ededed;
+            --text-dim: #737373;
+            --accent: #333;
             --font-ui: 'Inter', sans-serif;
             --font-code: 'JetBrains Mono', monospace;
         }
-
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { 
-            background: var(--bg); 
-            color: var(--text-main); 
-            font-family: var(--font-ui); 
-            line-height: 1.6;
-            padding: 4rem 10%;
-        }
-
-        #matrix-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.2; }
-        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 0%, rgba(3,3,3,0.8) 100%); z-index: 0; }
-
+        body { background: var(--bg); color: var(--text-main); font-family: var(--font-ui); line-height: 1.6; padding: 4rem 10%; }
+        #matrix-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.15; }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 0%, rgba(3,3,3,0.9) 100%); z-index: 0; }
         .container { position: relative; z-index: 10; max-width: 900px; margin: 0 auto; }
-
         .silver-metal {
             background: linear-gradient(to bottom, #ffffff 0%, #e2e2e2 25%, #a1a1a1 50%, #cfcfcf 75%, #ffffff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.5));
-            font-weight: 800;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.5)); font-weight: 800; font-size: 2.5rem; margin-bottom: 2rem; text-transform: uppercase;
         }
-
-        h2 { font-family: var(--font-code); font-size: 1.2rem; color: #fff; margin-top: 3rem; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 1rem; }
-        p { color: var(--text-dim); margin-bottom: 1rem; }
-        .mono { font-family: var(--font-code); color: #666; font-size: 0.8rem; margin-bottom: 2rem; }
-        .back-link { display: inline-block; margin-top: 4rem; font-family: var(--font-code); color: var(--accent); text-decoration: none; border: 1px solid var(--border); padding: 10px 20px; transition: 0.3s; }
-        .back-link:hover { background: rgba(59, 130, 246, 0.1); border-color: var(--accent); }
+        h2 { font-family: var(--font-code); font-size: 1.1rem; color: #fff; margin-top: 3rem; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+        p { color: var(--text-dim); margin-bottom: 1.2rem; font-size: 0.95rem; }
+        .mono { font-family: var(--font-code); color: #666; font-size: 0.75rem; margin-bottom: 0.5rem; }
+        .back-link { display: inline-block; margin-top: 4rem; font-family: var(--font-code); color: #fff; text-decoration: none; border: 1px solid #333; padding: 10px 20px; transition: 0.3s; font-size: 0.8rem; background: #000; }
+        .back-link:hover { border-color: #fff; }
     </style>
 </head>
 <body>
     <canvas id="matrix-canvas"></canvas>
     <div class="overlay"></div>
-
     <div class="container">
-        <div class="mono">DOC_ID: TERMS_V1.2 // ORTHONODE_INFRASTRUCTURE_LABS</div>
+        <div class="mono">DOC_ID: TERMS_V2.5 // ORTHONODE_INFRASTRUCTURE_LABS</div>
+        <div class="mono" style="color: #444;">CONFIDENTIAL // ENTERPRISE AUDIT USE ONLY</div>
         
-        <h1 class="silver-metal">Terms of Service</h1>
+        <h1 class="silver-metal">Service Terms</h1>
 
-        <h2>1. Acceptance of Protocol</h2>
-        <p>By deploying, operating, or interacting with Orthonode™ hardware or the Orthonode Protocol, you agree to these terms binding you to <strong>Orthonode Infrastructure Labs Private Limited</strong>.</p>
+        <h2>1. Scope of Audit</h2>
+        <p>By submitting telemetry data, logs, or API credentials to Orthonode Infrastructure Labs ("The Lab"), you engage us to perform a kinematic analysis via the Orthonode Assurance Platform (OAP). This engagement is strictly for verification purposes and does not constitute a freight management or dispatch contract.</p>
 
-        <h2>2. Operator Autonomy</h2>
-        <p>All Orthonode Nodes are operator-controlled hardware. Orthonode Infrastructure Labs provides the architecture; the operator maintains full administration of the infrastructure. We are not responsible for earnings loss due to network downtime, power failure, or ISP blocking.</p>
+        <h2>2. Read-Only Analysis</h2>
+        <p>OAP applies deterministic kinematic constraints and statistical tolerance bounds derived from physical motion models to detect non-physical telemetry patterns. All generated “Risk Scores” are advisory indicators and not automated enforcement actions. During evaluations, OAP operates on a passive, read-only basis.</p>
 
-        <h2>3. "As-Is" Hardware Code</h2>
-        <p>The Orthonode Protocol software and firmware are provided "AS IS", without warranty of any kind. The entire risk as to the quality and performance of the code is with the operator.</p>
+        <h2>3. Accuracy & Advisory</h2>
+        <p>OAP utilizes deterministic physics models to detect anomalies. While we strive for high deterministic accuracy, "Risk Scores" are advisory. The Lab is not liable for operational decisions (e.g., banning a carrier) made by the Client based on OAP outputs.</p>
 
-        <h2>4. Governing Law</h2>
-        <p>These terms shall be governed by the laws of India. Any disputes arising from the use of this infrastructure shall be subject to the exclusive jurisdiction of the courts in Bhopal, Madhya Pradesh.</p>
+        <h2>4. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, Orthonode Infrastructure Labs’ aggregate liability arising from any audit engagement shall not exceed the fees paid by the Client for that specific engagement. In no event shall Orthonode be liable for indirect, incidental, or consequential damages, including lost revenue or reputational harm.</p>
 
-        <a href="index.html" class="back-link">&lt; RETURN_TO_BASE</a>
+        <h2>5. Intellectual Property</h2>
+        <p>The client retains full ownership of their raw input data (GPS/IMU logs). Orthonode retains full ownership of the verification logic, models, and the generated "Risk Score" methodology.</p>
+
+        <h2>6. Governing Law</h2>
+        <p>These terms are governed by the laws of India. Orthonode Infrastructure Labs Private Limited is incorporated under Indian law. Exclusive jurisdiction resides with the courts of Bhopal, Madhya Pradesh.</p>
+
+        <a href="index.html" class="back-link">&lt; RETURN_TO_CONSOLE</a>
     </div>
 
     <script>
@@ -78,16 +68,16 @@
         const ctx = canvas.getContext('2d');
         let width = canvas.width = window.innerWidth;
         let height = canvas.height = window.innerHeight;
-        const chars = "010101XYZ_ORTHONODE_NEXUS";
+        const chars = "010101VERIFY_AUDIT_PHYSICS";
         let columns = Math.floor(width / 20);
         let drops = Array(columns).fill(1);
         function draw() {
-            ctx.fillStyle = 'rgba(3, 3, 3, 0.05)';
+            ctx.fillStyle = 'rgba(5, 5, 5, 0.05)';
             ctx.fillRect(0, 0, width, height);
             ctx.font = '12px JetBrains Mono';
             for (let i = 0; i < drops.length; i++) {
                 const text = chars[Math.floor(Math.random() * chars.length)];
-                ctx.fillStyle = Math.random() > 0.98 ? '#fff' : 'rgba(59, 130, 246, 0.3)';
+                ctx.fillStyle = Math.random() > 0.98 ? '#fff' : 'rgba(100, 100, 100, 0.3)';
                 ctx.fillText(text, i * 20, drops[i] * 20);
                 if (drops[i] * 20 > height && Math.random() > 0.975) drops[i] = 0;
                 drops[i]++;

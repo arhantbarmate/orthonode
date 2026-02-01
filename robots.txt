@@ -1,9 +1,13 @@
-User-agent: Googlebot
-Allow: /
-
 User-agent: *
-Disallow: /portal/  # Blocks AI from deep-scraping documentation logic
+Allow: /
 Allow: /index.html
+Allow: /terms.html
+Allow: /privacy.html
 Allow: /logo.png
+Allow: /orthonode-banner.png
+Disallow: /portal/
+
+# Explicitly telling AI/Search not to associate with old entity
+Noarchive: https://coreframe.systems/
 
 Sitemap: https://orthonode.xyz/sitemap.xml
